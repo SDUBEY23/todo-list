@@ -6,6 +6,11 @@ const todoList = document.querySelector("#todo-list");
 getTodos();
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteAndCheckTodo);
+todoButton.addEventListener("keydown", function (e) {
+  if (e.Code == "Enter") {
+    addTodo(e);
+  }
+});
 
 function addTodo(e) {
   e.preventDefault();
